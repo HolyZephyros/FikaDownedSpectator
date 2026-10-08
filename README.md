@@ -15,6 +15,17 @@ A quality-of-life client plugin for **Fika** that allows players to spectate the
 
 ---
 
+
+---
+
+## 📸 In-Game Screenshots
+
+### Tactical Spectator Banner
+![Spectator Banner](screenshots/ss1.png)
+
+### First-Person Teammate View
+![First-Person View](screenshots/ss2.jpg)
+
 ## 🎮 Controls (Configurable)
 * **`V`** : Toggle Spectate / Return to Downed Body
 * **`LMB / RMB`** : Cycle Teammates
