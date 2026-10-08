@@ -1,6 +1,6 @@
 # Fika Downed Spectator
 
-A quality-of-life client plugin for **Fika** that allows players to spectate their teammates in first-person while in the **Downed (bleedout)** state, instead of staring at a static black screen.
+A quality-of-life client plugin for **Fika** that allows players to spectate their teammates in third-person while in the **Downed (bleedout)** state, instead of staring at a static black screen.
 
 ![Thumbnail](thumbnail.jpg)
 
@@ -23,8 +23,8 @@ A quality-of-life client plugin for **Fika** that allows players to spectate the
 ### Tactical Spectator Banner
 ![Spectator Banner](screenshots/ss1.png)
 
-### First-Person Teammate View
-![First-Person View](screenshots/ss2.png)
+### Third-Person Spectator View
+![Third-Person Spectator View](screenshots/ss2.png)
 
 ## 🎮 Controls (Configurable)
 * **`V`** : Toggle Spectate / Return to Downed Body
