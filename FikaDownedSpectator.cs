@@ -4,7 +4,6 @@ using BepInEx;
 using BepInEx.Configuration;
 using Comfort.Common;
 using EFT;
-using EFT.CameraControl;
 using EFT.UI;
 using Fika.Core.Main.FreeCamera;
 using Fika.Core.Main.Players;
@@ -14,7 +13,7 @@ using UnityEngine.UI;
 
 namespace FikaDownedSpectator
 {
-    [BepInPlugin("com.zephyros.fikadownedspectator", "Fika Downed Spectator", "1.0.0")]
+    [BepInPlugin("com.zephyros.fikadownedspectator", "Fika Downed Spectator", "1.0.1")]
     [BepInDependency("com.fika.core")]
     public class FikaDownedSpectatorPlugin : BaseUnityPlugin
     {
@@ -92,7 +91,7 @@ namespace FikaDownedSpectator
                 _getPlayerMethod = prop.GetGetMethod(true);
             }
 
-            Logger.LogInfo("Fika Downed Spectator 1.0.0 loaded!");
+            Logger.LogInfo("Fika Downed Spectator 1.0.1 loaded!");
         }
 
         private void Update()
@@ -218,13 +217,11 @@ namespace FikaDownedSpectator
                     PreloaderUI.Instance.SetBlackImageAlpha(0f);
                 }
 
-                // 5. Restore FOV if clamped
-                if (CameraManager.Exist && CameraManager.Instance.Camera != null)
+                // 5. Restore FOV if clamped (uses FreeCameraController.CameraMain / Camera.main for SPT 4.0.x & 4.1.x compatibility)
+                Camera mainCam = fcc.CameraMain != null ? fcc.CameraMain : Camera.main;
+                if (mainCam != null && mainCam.fieldOfView < 40f)
                 {
-                    if (CameraManager.Instance.Camera.fieldOfView < 40f)
-                    {
-                        CameraManager.Instance.Camera.fieldOfView = 75f;
-                    }
+                    mainCam.fieldOfView = 75f;
                 }
 
                 Logger.LogInfo("Entered Downed Spectator Mode cleanly!");

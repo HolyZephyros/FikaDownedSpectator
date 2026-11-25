@@ -34,8 +34,8 @@ A quality-of-life client plugin for **Fika** that allows players to spectate the
 ---
 
 ## 📦 Requirements
-* **SPT:** 4.0.0+ (Tested on SPT 4.1.x)
-* **Fika:** 2.4.0+
+* **SPT:** 4.0.13+ / 4.1.x (Single build supports both SPT 4.0.13 and 4.1.x)
+* **Fika:** 2.3.x+ / 2.4.x+
 
 ---
 
